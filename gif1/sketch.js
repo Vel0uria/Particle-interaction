@@ -1,40 +1,23 @@
 let w = 0;
-
+let img;
 
 function setup() {
-	createCanvas(windowWidth, 400);
-	
-
-	 particle = new Particle()
-	// particle1 = new Particle(380,105)
-
-
+	createCanvas(windowWidth, 200);
+      particle = new Particle()
+      img = loadImage('../data/bojack.png')
+      frameRate(10)
+      createLoop({ duration:6, gif:true, download:true, fileName:'star.gif', options:{width:1920,height:1080}})
 }
 
 function draw() {
 	
-// background(0,w)
-background(0,40)
+ //background(w,100)
+background(0,w)
+//background(0)
 
-//line(80,85,380,105,random(z),random(z))
- 
-// ray.show()
-// ray.lookAt(mouseX, mouseY)
-// let pt = ray.cast(wall)
-// if(pt){
-
-// fill(255)
-// ellipse(pt.x, pt.y,8,8)
-
-// }
-
+image(img, 130,height-100,80,100)
 particle.show()
-//particle1.show()
-
-//particle.move()
-//particle1.show()
-
-angle = angle + 0.01
+angle = angle + 0.09
 
 
 }
